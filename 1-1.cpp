@@ -38,10 +38,10 @@ int  main () {
 	return 0 ;
 }
 
-double  getA ( const  double x, const  double y, const  double z) {
+double getA(const double x, const double y, const double z) {
   return (2 * cos (x - M_PI/6)) / (1/2 + (pow(sin(y),2)));
 }
 
-double  getB ( const  double x, const  double y, const  double z) {
-  return  1 + (( pow (z, 2 )) / 3 + ( pow (z, 2 ) / 5 ));
+double getB(const double x, const double y, const double z) {
+  return 1 + ((pow(z, 2)) / 3 + (pow(z,2) / 5));
 }   
