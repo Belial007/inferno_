@@ -1,9 +1,9 @@
 # define  _USE_MATH_DEFINES
 
-# включить  < iostream >
-# включить  < cmath >
+#include <iostream>
+#include <cmath>
 
-используя  пространство имен  std ;
+using namespace  std ;
 
 / * *
 * \ short Математическая функция, рассчитывающая значение a
