@@ -35,11 +35,11 @@ int  main () {
 	const  auto b = getB (x, y, z);
 	cout << " x = " << x << " \ n y = " << y << " \ n z = " << z << " \ n a = " << a << " \ n b = « << b;
 
-	возврат  0 ;
+	return 0 ;
 }
 
 double  getA ( const  double x, const  double y, const  double z) {
-  Возвращение ( 2 * соз (х - M_PI / 6 )) / ( 1 / 2 + ( пау ( грех (у), 2 )));
+  return (2 * cos (x - M_PI/6)) / (1/2 + (pow(sin(y),2)));
 }
 
 double  getB ( const  double x, const  double y, const  double z) {
