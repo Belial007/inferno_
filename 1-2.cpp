@@ -11,7 +11,7 @@ using namespace std;
 * \ param  - коэффициент, имеющий значение тип данных с плавающей точкой двойной точности
 * \ return площадь прямоугольника 
 * * /
-double getS(const double a, const double n);
+double gets(const double a, const double n);
 
 /**
 * \brief Математическая функция, рассчитывающая периметр прямоугольника
@@ -19,7 +19,7 @@ double getS(const double a, const double n);
 * \param - коэффициент, имеющий тип данных с плавающей точкой двойной точности
 * \return периметр прямоугольника 
 **/
-double getP(const double a, const double n);
+double getp(const double a, const double n);
 
 
 /**
