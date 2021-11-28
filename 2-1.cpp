@@ -6,22 +6,22 @@
 using namespace std;
 
 /**
-* \brief Математическая функция, рассчитывающая объём шара
-* \radius - радиус шара
-* \return - объём шара
+*\ brief Математическая функция, рассчитывающая объём шара
+*\ r - радиус шара
+*\ return - объём шара
 **/
-double GetVolume(const double );
+double GetVolume(const double r );
 
 /**
-* \brief Математическая функция, рассчитывающая площадь поверхности шара
-* \radius - радиус шара
-* \return - площадь поверхности шара
+*\ brief Математическая функция, рассчитывающая площадь поверхности шара
+*\ r - радиус шара
+*\ return - площадь поверхности шара
 **/
-double GetSurfaceArea(const double r);
+double GetSurfaceArea(const double r );
 
 /**
- * \brief Точка входа в программу.
- */
+ *\brief Точка входа в программу.
+**/
 int main() {
   double r;
 
