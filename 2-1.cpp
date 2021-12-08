@@ -1,39 +1,78 @@
 #define _USE_MATH_DEFINES
 
-#include <cmath>
 #include <iostream>
+#include <cmath>
 
 using namespace std;
 
 /**
+ * \brief Константы объёма и площади поверхности шара.
+ */
+enum class BALL
+{
+    /**
+     * \brief Объём шара.
+     */
+    Volume,
+
+    /**
+     * \brief Площадь поверхности шара.
+     */
+    SurfaceArea
+};
+
+/**
 *\ brief Математическая функция, рассчитывающая объём шара
-*\ r - радиус шара
+*\ R - радиус шара
 *\ return - объём шара
 **/
-double GetVolume(const double r );
+double GetVolume(const double R);
 
 /**
 *\ brief Математическая функция, рассчитывающая площадь поверхности шара
-*\ r - радиус шара
+*\ R - радиус шара
 *\ return - площадь поверхности шара
 **/
-double GetSurfaceArea(const double r );
+double GetSurfaceArea(const double R);
 
 /**
- *\brief Точка входа в программу.
-**/
-int main() {
-  double r;
+ * \brief Точка входа в программу.
+ * \return Возвращает 0 в случае успеха.
+ */
+int main()
+{
+    setlocale(LC_ALL, "Russian");
+    cout << "Что вы хотите узнать? "
+        << "\nОбъём - " << static_cast<int>(BALL::Volume)
+        << "\nПлощадь поверхности - " << static_cast<int>(BALL::SurfaceArea);
+    cout << endl; 
+    int ball;
+    cin >> ball;
+    double R = 0.0;
+    cout << "Введите R ";
+    cin >> R;
 
-  cout << "Введите радиус и нажмите Enter: \n";
-  cin >> r;
-
-	const auto volume = GetVolume(r);
-  const auto surfacearea = GetSurfaceArea(r);
-
-	cout << "Радиус r = " << r << "\n Объём шара = " << volume << "\n Площадь поверхности шара = " << surfacearea;
-	return 0;
+    const auto Figure = static_cast<BALL>(ball);
+    switch (Figure)
+    {
+    case BALL::Volume:
+        cout << "V = " << GetVolume(R);
+        break;
+    case BALL::SurfaceArea:
+        cout << "S = " << GetSurfaceArea(R);
+        break;
+        return 0;
+    }
 }
 
-double GetVolume(const double r) { return pow(r, 3) * ((4 * M_PI)/3); } 
-double GetSurfaceArea(const double r) { return pow(r, 2) * M_PI * 4; } 
+double GetVolume(const double R) {
+    double V = 0.0;
+    V = pow(R, 3)* ((4 * M_PI) / 3);
+    return V;
+}
+
+double GetSurfaceArea(const double R) {
+    double S = 0.0;
+    S = pow(R, 2)* M_PI * 4 ;
+    return S;
+}
